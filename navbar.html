@@ -1,0 +1,60 @@
+<!--navbar-->
+<header class="wrapper">
+    <!--start top header wrapper-->
+    <div class="border border-b-custom-color  lg:border-none bg-blue-500">
+        <nav class="flex justify-between items-center max-w-screen-xl mx-5 lg:mx-auto ">
+            <div>
+                <div class="  hidden lg:inline ">
+                    <img src="./images/logo-header.png" alt="">
+                </div>
+                <div class="lg:hidden inline mb-2">
+                    <img src="./images/logo-footer.png" alt="">
+                </div>
+            </div>
+            <div>
+                <ul class="hidden lg:flex items-center space-x-6">
+                    <li><a class="hover:underline" href="index.html">Home</a></li>
+                    <li><a class="hover:underline" href="all-product.html">All Products</a></li>
+                    <li><a class="hover:underline" href="about-us.html">About</a></li>
+                    <li><a class="hover:underline" href="blog-post.html">Blog</a></li>
+                    <!-- <li><a class="hover:underline" href="signin.html">Login Now</a></li> -->
+                    <li><a class="hover:underline" href="contact-us.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="space-x-6">
+                <div class="lg:inline hidden">
+                    <i></i><a href="account-user-details.html" class="text-xl hover:text-gray-600"></i>
+                    <i ><a href="shop-cart.html" class="text-xl hover:text-gray-600"><i class='bx bx-cart'></i>
+                    
+                    <a class="hover:underline bg-blue-500 " href="signin.html"> <button class="btn bg-custom-color text-white" >Login Now </button></a>
+                    
+                    <!-- <a href="./register.html"><button class="btn bg-custom-color text-white" >Register</button></a> -->
+                    
+                </div>
+                <i class="fa-solid fa-bars inline lg:hidden text-custom-color"></i>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="lg:hidden fixed inset-0 bg-white shadow-lg z-50 hidden">
+        <div class="p-4">
+            <button id="closeMobileMenu" class="text-2xl text-red-800 float-right">&times;</button>
+            <ul class="space-y-4">
+                <li><a class="hover:underline" href="index.html">Home</a></li>
+                <li><a class="hover:underline" href="about-us.html">About Us</a></li>
+                <li><a class="hover:underline" href="all-product.html">All Products</a></li>
+                <li><a class="hover:underline" href="blog-post.html">Blog</a></li>
+                <li><a class="hover:underline" href="signin.html">Login Now</a></li>
+                <li><a class="hover:underline" href="contact-us.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </div>
+</header>
+
+
+
+<!-- Add the JavaScript at the end -->
+<script src="index.js"></script>
+<script src="./js/navbar.js"></script>
+<link rel="stylesheet" href="style.css">

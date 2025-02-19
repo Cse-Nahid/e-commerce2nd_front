@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./images/linkup-site.png" type="image/png">
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://js.stripe.com/v3/"></script>
+
+    <title>Checkout Payment</title>
+</head>
+
+<body class="bg-gray-50">
+    <div id="navbar-container"></div>
+
+    <section class="py-4 border-b border-t bg-white shadow-md">
+        <div class="container mx-auto">
+            <div class="flex justify-between items-center">
+                <h3 class="text-lg font-semibold">Checkout Payment</h3>
+                <nav class="text-sm">
+                    <ol class="breadcrumb flex items-center space-x-2">
+                        <li><a href="index.html" class="text-blue-500 hover:text-blue-700"><i
+                                    class="bx bx-home-alt"></i> Home</a></li>
+                        <li><a href="javascript:;" class="text-gray-600 hover:text-gray-800">Payment</a></li>
+                        <li class="text-gray-500">Checkout Payment</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <div class="container mx-auto p-6 grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <!-- Payment Methods Card -->
+        <div class="lg:col-span-2">
+            <div class="bg-white rounded-lg shadow-lg p-6 mb-4">
+                <h2 class="text-2xl font-bold mb-6 text-gray-800">Select a Payment Method</h2>
+                
+                <!-- Stripe Payment Option -->
+                <div class="border rounded-lg p-4 hover:shadow-xl transition-shadow duration-300 cursor-pointer" id="credit-card-option">
+                    <div class="flex items-center space-x-4">
+                        <img src="https://i.ibb.co/TwGmP2n/CITYPNG-COM-HD-Stripe-Official-Logo-PNG-2000x2000.png" alt="Stripe Logo" class="w-12">
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-700">Credit Card</h3>
+                            <p class="text-sm text-gray-500">Pay securely using your credit card through Stripe.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Confirm Payment Button -->
+                <button
+                    class="w-full bg-blue-600 text-white py-3 mt-8 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-300"
+                    id="checkout-button">
+                    Confirm Payment
+                </button>
+        
+                <!-- Test Card Information -->
+                <div class="mt-6 text-gray-600 text-sm">
+                    <p class="font-medium">For testing purposes, use the following card number:</p>
+                    <div class="flex items-center mt-2">
+                        <span id="test-card-number" class="bg-gray-100 p-2 rounded-md text-gray-700">4242 4242 4242 4242</span>
+                        <button 
+                            onclick="copyTestCardNumber()"
+                            class="ml-3 bg-gray-200 p-2 rounded-md hover:bg-gray-300 text-gray-600 transition-colors duration-200">
+                            Copy
+                        </button>
+                    </div>
+                    <p class="mt-1 text-xs text-gray-500">Expiration date: Any future date, CVV: Any 3 digits</p>
+                </div>
+            </div>
+        </div>
+        
+
+        <!-- Order Summary Card -->
+        <div class="bg-white rounded-lg shadow-lg p-6">
+            <h3 class="text-xl font-bold mb-4">Order Summary</h3>
+            <div id="cart-summary" class="space-y-4">
+            </div>
+            <hr class="my-4">
+            <div class="flex justify-between items-center font-semibold">
+                <p class="text-lg">Total (with $14 tax)</p>
+                <p id="total-price" class="text-lg">$0.00</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-6 flex justify-between container mx-auto">
+        <a href="shop-cart.html">
+            <button class="px-4 py-2 bg-gray-200 rounded-md hover:bg-gray-300 transition duration-300">← Back to
+                Shopping</button>
+        </a>
+    </div>
+
+    <div id="alert-container" class="fixed top-4 right-4 z-50"></div>
+
+    <a href="javascript:;"
+        class="back-to-top fixed bottom-10 right-5 bg-blue-600 text-white p-2 rounded-full shadow-lg hidden">
+        <i class='bx bxs-up-arrow-alt'></i>
+    </a>
+
+    <div id="footer-container"></div>
+    <script src="./js/checkout-payment.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            function loadHTMLIntoElement(url, elementId) {
+                fetch(url)
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById(elementId).innerHTML = data;
+                    })
+                    .catch(error => console.error('Error loading HTML:', error));
+            }
+            loadHTMLIntoElement('navbar.html', 'navbar-container');
+            loadHTMLIntoElement('footer.html', 'footer-container');
+            fetchCartItems();  // Fetch cart items on page load
+        });
+
+        window.onscroll = function () {
+            var backToTopBtn = document.querySelector('.back-to-top');
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                backToTopBtn.classList.remove('hidden');
+            } else {
+                backToTopBtn.classList.add('hidden');
+            }
+        };
+
+        document.querySelector('.back-to-top').addEventListener('click', function () {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+
+</html>

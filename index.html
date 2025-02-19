@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./images/linkup-site.png" type="image/png">
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <title>ShopNest</title>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        "custom-color": '#089800',
+                        "custom-bg-color": '#EFEBE3',
+                        "custom-text-color": '#111111',  
+                        "gradint-nav1" :'FFFFFF',
+                        "gradient-color1":'#58e45f',
+                        "gradient-color2":'#a2f59b',
+                        
+                    }
+                }
+            }
+        }
+    </script>
+   
+   <style>
+    .font-sora {
+        font-family: "Sora", serif;
+    }
+</style>
+</head>
+
+<!-- <body class="bg-gray-100"> -->
+    <div id="navbar-container"></div> 
+    <main>
+        <body class="font-sora mt-0">
+           <header class="gradint">
+                <div class="w-full ">
+                    <div class="text-center flex justify-center items-center mx-5">
+                        <div>
+                            <h1 class="font-semibold text-4xl mb-5  animate-pulse">Freshness <span
+                                    class="text-custom-color">You Can <br>
+                                    Count</span> On, Prices You Will Love!</h1>
+                            <!-- <p class="text-custom-text-color">Shop your daily essentials at unbeatable prices. From fresh
+                                produce to pantry <br> staples, we have got you covered every day!</p> -->
+                        </div>
+
+
+                        
+                    </div>
+
+
+                    <div class="header-content">
+                        <div class="container mx-auto px-4 py-2 flex items-center justify-between lg:justify-around relative">
+                            <!-- Mobile menu and logo on the left for mobile view -->
+                            <div class="flex items-center space-x-3 lg:space-x-0 lg:justify-start">
+                                <!-- Mobile menu button -->
+                                <button id="mobileMenuButton" class="lg:hidden text-2xl"><i class="bx bx-menu"></i></button>
+                                <div class="logo">
+                                    <a href="index.html">
+                                        <img src="images/logo for sales company and bag or e-commerce.png" class="w-25" alt="Logo" />
+                                    </a>
+                                </div>
+                            </div>
+                
+                            <!-- Centered Search bar for desktop view -->
+                            <!-- Navbar Search Bar for desktop -->
+                            <div
+                                class="hidden lg:flex justify-center absolute left-1/2 transform -translate-x-1/2 w-full lg:w-auto lg:space-x-2">
+                                <div class="flex items-center">
+                                    <input id="navbar-search-input" type="text"
+                                        class="form-control w-full lg:w-96 border-2 border-gray-700 rounded-l-md px-3 py-2"
+                                        placeholder="Search for Products">
+                                    <button id="navbar-search-button"
+                                        class="btn bg-gray-800 text-white border-2 border-gray-700 rounded-r-md px-4 py-2"
+                                        type="button">Search</button>
+                                </div>
+                            </div>
+                
+                
+                   
+                        </div>
+                
+                        <!-- Search bar for mobile view -->
+                        <div class="w-full lg:hidden flex justify-center pb-5">
+                            <div class="flex items-center w-full px-6">
+                                <input id="mobile-search-input" type="text"
+                                    class="form-control w-full border-2 border-gray-700 rounded-l-md px-3 py-2"
+                                    placeholder="Search for Products">
+                                <button id="mobile-search-button"
+                                    class="btn bg-gray-800 text-white border-2 border-gray-700 rounded-r-md px-4 py-2"
+                                    type="button">Search</button>
+                            </div>
+                        </div>
+                
+                
+                    </div>
+                
+
+
+
+
+
+
+
+
+
+                    <div class="flex justify-center items-center">
+                        <img src="./images/hero-vegetables.png" alt="">
+                    </div>
+                </div>
+
+
+
+
+   </header>
+            <main>
+                <section class="max-w-screen-xl mx-5 lg:mx-auto my-4 ">
+                    <h3 class="text-2xl font-semibold text-custom-color mb-5">Services</h3>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+                        <div class="card bg-base-100 w-96 shadow-xl bg-custom-bg-color">
+                            <figure class="px-10 pt-10">
+                                <div class="avatar">
+                                    <div class="ring-primary ring-offset-base-100 w-24 rounded-full ring ring-offset-2">
+                                        <img src="./images/service.png" />
+                                    </div>
+                                </div>
+                            </figure>
+                            <div class="card-body items-center text-center">
+                                <h2 class="card-title font-sora">24/7 Services </h2>
+                                <p>Providing 24/7 reliable service with quality support, fast response, and customer
+                                    satisfaction guaranteed.</p>
+                            </div>
+                        </div>
+    
+                        <div class="card bg-base-100 w-96 shadow-xl bg-custom-bg-color">
+                            <figure class="px-10 pt-10">
+                                <div class="avatar">
+                                    <div class="ring-primary ring-offset-base-100 w-22 rounded-full ring ring-offset-2">
+                                        <img src="./images/delivery.png" />
+                                    </div>
+                                </div>
+                            </figure>
+                            <div class="card-body items-center text-center">
+                                <h2 class="card-title font-sora">Fast Delivery</h2>
+                                <p>Ensuring 24/7 fast delivery with speed, reliability, and customer satisfaction
+                                    guaranteed.</p>
+                            </div>
+                        </div>
+    
+                        <div class="card bg-base-100 w-96 shadow-xl bg-custom-bg-color">
+                            <figure class="px-10 pt-10">
+                                <div class="avatar">
+                                    <div class="ring-primary ring-offset-base-100 w-24 rounded-full ring ring-offset-2">
+                                        <img src="./images/healthy.png" />
+                                    </div>
+                                </div>
+                            </figure>
+                            <div class="card-body items-center text-center">
+                                <h2 class="card-title font-sora">Healthy Products </h2>
+                                <p>Offering 24/7 fast delivery of fresh, natural, and healthy products for your well-being.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+    
+    
+    
+                <section class="max-w-screen-2xl lg:mx-auto lg:my-20 bg-custom-bg-color lg:h-[800px] pb-5">
+                    <div class="max-w-screen-xl mx-5 lg:mx-auto pt-6 lg:pt-10 ">
+                        <h3 class="text-3xl font-semibold text-custom-color mb-5 mt-5">Popular Products</h3>
+                        <div
+                            class=" grid grid-cols-2 grid-rows-7 lg:grid-cols-5 lg:grid-rows-3 lg:space-x-5 lg:space-y-8 gap-5">
+                            <div
+                                class="col-span-2 row-span-3 lg:col-span-2 lg:row-span-3 bg-gradient-to-r from-gradient-color1 to-gradient-color2  border-2 pl-10  pt-6 rounded-xl mt-8 ">
+                                <h3 class="text-white font-bold text-2xl pb-3 pt-5">30% off</h3>
+                                <p class="pb-4">Discover a world of treats, toys, and <br> essentials handpicked for </p>
+                                <div class="flex">
+                                    <button class="btn bg-white border-none ">Buy Now</button>
+                                    <div class="flex justify-end pt-10">
+                                        <img class=" h-56 w-56 lg:h-80 lg:w-80 lg:mt-20 " src="./images/vegetable-offer.png"
+                                            alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex bg-white justify-center items-center  px-4 py-3 rounded-lg">
+                                <div class="w-20 h-20 rounded-lg ">
+                                    <img class="rounded-lg" src="./images/onion.png" alt="">
+                                </div>
+                                <div class="pl-2">
+                                    <div class="flex items-center  gap-2 text-center">
+                                        <div class="w-6 h-6 pt-1">
+                                            <img src="./images/star.png" alt="">
+                                        </div>
+                                        <p class="pt-1">4.5</p>
+                                    </div>
+                                    <p class="text-custom-text-color font-semibold">Onion 1 KG</p>
+                                    <p class="font-semibold">$39.99</p>
+                                </div>
+                            </div>
+                            <div class="flex bg-white justify-center items-center   px-4 py-3 rounded-lg">
+                                <div class="w-20 h-20 rounded-lg ">
+                                    <img class="rounded-lg" src="./images/tomato.png" alt="">
+                                </div>
+                                <div class="pl-2">
+                                    <div class="flex items-center  gap-2 text-center">
+                                        <div class="w-6 h-6 pt-1">
+                                            <img src="./images/star.png" alt="">
+                                        </div>
+                                        <p class="pt-1">4.5</p>
+                                    </div>
+                                    <p class="text-custom-text-color font-semibold">Tomato 1 KG</p>
+                                    <p class="font-semibold">$39.99</p>
+                                </div>
+                            </div>
+                            <div class="flex bg-white justify-center items-center  px-4 py-3 rounded-lg">
+                                <div class="w-20 h-20 rounded-lg ">
+                                    <img class="rounded-lg" src="./images/potato.png" alt="">
+                                </div>
+                                <div class="pl-2">
+                                    <div class="flex items-center  gap-2 text-center">
+                                        <div class="w-6 h-6 pt-1">
+                                            <img src="./images/star.png" alt="">
+                                        </div>
+                                        <p class="pt-1">4.5</p>
+                                    </div>
+                                    <p class="text-custom-text-color font-semibold">Potato 1 KG</p>
+                                    <p class="font-semibold">$39.99</p>
+                                </div>
+                            </div>
+                            <div class="flex bg-white justify-center items-center  px-4 py-3 rounded-lg">
+                                <div class="w-20 h-20 rounded-lg ">
+                                    <img class="rounded-lg" src="./images/tomato.png" alt="">
+                                </div>
+                                <div class="pl-2">
+                                    <div class="flex items-center  gap-2 text-center">
+                                        <div class="w-6 h-6 pt-1">
+                                            <img src="./images/star.png" alt="">
+                                        </div>
+                                        <p class="pt-1">4.5</p>
+                                    </div>
+                                    <p class="text-custom-text-color font-semibold">Tomato 1 KG</p>
+                                    <p class="font-semibold">$39.99</p>
+                                </div>
+                            </div>
+                            <div class="flex bg-white justify-center items-center  px-4 py-3 rounded-lg">
+                                <div class="w-20 h-20 rounded-lg pr-2">
+                                    <img class="rounded-lg" src="./images/onion.png" alt="">
+                                </div>
+                                <div class="">
+                                    <div class="flex items-center  gap-2 text-center">
+                                        <div class="w-6 h-6 pt-1">
+                                            <img src="./images/star.png" alt="">
+                                        </div>
+                                        <p class="pt-1">4.5</p>
+                                    </div>
+                                    <p class="text-custom-text-color font-semibold">Onion 1 KG</p>
+                                    <p class="font-semibold">$39.99</p>
+                                </div>
+                            </div>
+                            <div class="flex bg-white justify-center items-center   px-4 py-3 rounded-lg">
+                                <div class="w-20 h-20 rounded-lg ">
+                                    <img class="rounded-lg" src="./images/potato.png" alt="">
+                                </div>
+                                <div class="pl-2">
+                                    <div class="flex items-center  gap-2 text-center">
+                                        <div class="w-6 h-6 pt-1">
+                                            <img src="./images/star.png" alt="">
+                                        </div>
+                                        <p class="pt-1">4.5</p>
+                                    </div>
+                                    <p class="text-custom-text-color font-semibold">Potato 1 KG</p>
+                                    <p class="font-semibold">$39.99</p>
+                                </div>
+                            </div>
+                            <div class="flex bg-white justify-center items-center   px-4 py-3 rounded-lg">
+                                <div class="w-20 h-20 rounded-lg">
+                                    <img class="rounded-lg" src="./images/onion.png" alt="">
+                                </div>
+                                <div class="pl-2">
+                                    <div class="flex items-center  gap-2 text-center">
+                                        <div class="w-6 h-6 pt-1">
+                                            <img src="./images/star.png" alt="">
+                                        </div>
+                                        <p class="pt-1">4.5</p>
+                                    </div>
+                                    <p class="text-custom-text-color font-semibold">Onion 1 KG</p>
+                                    <p class="font-semibold">$39.99</p>
+                                </div>
+                            </div>
+                            <div class="flex bg-white justify-center items-center  px-4 py-3 rounded-lg">
+                                <div class="w-20 h-20 rounded-lg ">
+                                    <img class="rounded-lg" src="./images/potato.png" alt="">
+                                </div>
+                                <div class="pl-2">
+                                    <div class="flex items-center  gap-2 text-center">
+                                        <div class="w-6 h-6 pt-1">
+                                            <img src="./images/star.png" alt="">
+                                        </div>
+                                        <p class="pt-1">4.5</p>
+                                    </div>
+                                    <p class="text-custom-text-color font-semibold">Potato 1 KG</p>
+                                    <p class="font-semibold">$39.99</p>
+                                </div>
+                            </div>
+                            <div class="hidden lg:inline ">
+                                <div class="flex bg-white justify-center items-center  px-4 py-8 rounded-lg ">
+                                    <div class="w-20 h-20 rounded-lg ">
+                                        <img class="rounded-lg" src="./images/tomato.png" alt="">
+                                    </div>
+                                    <div class="pl-2">
+                                        <div class="flex items-center  gap-2 text-center">
+                                            <div class="w-6 h-6 pt-1">
+                                                <img src="./images/star.png" alt="">
+                                            </div>
+                                            <p class="pt-1">4.5</p>
+                                        </div>
+                                        <p class="text-custom-text-color font-semibold">Tomato 1 KG</p>
+                                        <p class="font-semibold">$39.99</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+        
+                    </div>
+                </section>
+    
+    
+    
+
+
+
+
+
+        <!--start Featured product-->
+        <section class="py-4 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="flex items-center justify-center pb-4">
+                    <div class="w-1/6 border-t-2 border-gray-300"></div>
+                    <h5 class="mx-4 text-lg font-bold uppercase">FEATURED PRODUCTS</h5>
+                    <div class="w-1/6 border-t-2 border-gray-300"></div>
+                </div>
+                <div class="product-grid">
+                    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-4">
+                        <!-- 1 -->
+                        <!-- <a href="" class="block">
+                            <div class="card bg-white border border-gray-200 rounded-lg overflow-hidden shadow-lg transition-transform duration-300 transform hover:scale-105">
+                                <div class="relative overflow-hidden">
+                                    <div class="absolute top-3 right-3">
+                                    </div>
+                                    <img src="./images/products/11.png" class="w-full h-auto object-cover" alt="Product 1">
+                                </div>
+                                <div class="p-4">
+                                    <div class="flex items-center justify-between">
+                                        <div>
+                                            <h6 class="text-lg font-bold text-gray-900 mb-2">White Polo Shirt</h6>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center mt-2">
+                                        <i class="bx bxs-star text-yellow-500"></i>
+                                        <i class="bx bxs-star text-yellow-500"></i>
+                                        <i class="bx bxs-star text-yellow-500"></i>
+                                        <i class="bx bxs-star text-yellow-500"></i>
+                                        <i class="bx bxs-star text-yellow-500"></i>
+                                    </div>
+                                    <div class="flex items-center gap-2 mt-2">
+                                        <span class="text-gray-500 line-through">$59.00</span>
+                                        <span class="text-lg font-bold text-gray-900">$48.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a> -->
+
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--end Featured product-->
+
+ 
+
+        <div id="footer-container"></div>
+
+    </main>
+
+    <!-- Start Back To Top Button -->
+    <a href="javascript:;"
+        class="back-to-top fixed bottom-10 right-5 bg-blue-500 text-white p-2 rounded-full shadow-lg hidden">
+        <i class='bx bxs-up-arrow-alt'></i>
+    </a>
+
+
+    <script src="index.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            function loadHTMLIntoElement(url, elementId) {
+                fetch(url)
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById(elementId).innerHTML = data;
+                    })
+                    .catch(error => console.error('Error loading HTML:', error));
+            }
+            loadHTMLIntoElement('navbar.html', 'navbar-container');
+            loadHTMLIntoElement('footer.html', 'footer-container');
+        });
+        window.onscroll = function () {
+            var backToTopBtn = document.querySelector('.back-to-top');
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                backToTopBtn.classList.remove('hidden');
+            } else {
+                backToTopBtn.classList.add('hidden');
+            }
+        };
+
+        document.querySelector('.back-to-top').addEventListener('click', function () {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });        
+    </script>
+    <script src="./js/navbar.js"></script>
+</body>
+
+</html>

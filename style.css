@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body{
+    font-family: 'Albert Sans', sans-serif;
+}
+/* Hide Swiper navigation icons on mobile */
+@media (max-width: 767px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none !important;
+  }
+}
+header {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+/* Add this CSS to your stylesheet */
+.tab-btn.active {
+  background-color: #D3D3D3;
+  color: black;
+  font-weight: bold;
+}
+
+
+.gradint{
+  background: linear-gradient(to bottom, #5768ff 0%, #baff39 100%);
+  position: relative;
+  top: 0;
+  margin-top: 0;
+}
+
+/* register */
+.nav-reg{
+  background-color: #00d41c;
+
+}
+.container{
+  display: flex;
+}
+
+
+
+
